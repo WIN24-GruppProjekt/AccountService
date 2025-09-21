@@ -15,6 +15,7 @@ AccountService/
  ├── Models/           # Entities & DTOs
  ├── Services/         # Business logic
  ├── Data/             # DbContext & Migrations
+ ├── Validators/       # Validation of DTOs
  ├── Program.cs        # App startup
  └── appsettings.json  # Config (connection string + JWT)
 
