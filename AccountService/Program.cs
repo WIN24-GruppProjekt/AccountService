@@ -2,6 +2,9 @@ using System.Text;
 using AccountService.Data.Contexts;
 using AccountService.Data.Entities;
 using AccountService.Services;
+using AccountService.Validators;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -87,6 +90,10 @@ builder.Services.AddSwaggerGen(c =>
         { securityScheme, Array.Empty<string>() }
     });
 });
+
+builder.Services.AddFluentValidationAutoValidation();
+
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterCustomerDtoValidator>();
 
 builder.Services.AddControllers();
 builder.Services.AddAuthorization();
