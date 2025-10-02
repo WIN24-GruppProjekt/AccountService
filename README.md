@@ -93,11 +93,18 @@ Content-Type: application/json
 GET /api/User/instructor/get
 Content-Type: application/json
 Response:
- {
-    "firstName": "Instructor",
-    "lastName": "Instructor",
-    "imgUrl": null
-  }
+{
+   "firstName": "Instructor",
+   "lastName": "Instructor",
+   "imgUrl": null
+}
+```
+```http
+GET /api/User/instructor/{id}
+Content-Type: application/json
+{
+   "id": "instructor-guid-id-string",
+}
 ```
 ## Team Workflow
 - Backend: Identity, JWT, DB schema/migrations
