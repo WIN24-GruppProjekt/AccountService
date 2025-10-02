@@ -59,10 +59,12 @@ POST /api/Register/instructor
 Content-Type: application/json
 
 {
-  "email": "instructor@example.com",
-  "password": "Str0ng!Pass",
-  "firstName": "Jane",
-  "lastName": "Doe"
+  "firstName": "string",
+  "lastName": "string",
+  "email": "user@example.com",
+  "phone": "string",
+  "password": "string",
+  "imgUrl": "string"
 }
 ```
 ```http
@@ -70,10 +72,12 @@ POST /api/Register/customer
 Content-Type: application/json
 
 {
-  "email": "customer@example.com",
-  "password": "Str0ng!Pass",
-  "firstName": "John",
-  "lastName": "Doe"
+  "firstName": "string",
+  "lastName": "string",
+  "email": "user@example.com",
+  "phone": "string",
+  "password": "string",
+  "imgUrl": "string"
 }
 ```
 ```http
@@ -84,6 +88,16 @@ Content-Type: application/json
   "email": "instructor@example.com",
   "password": "Str0ng!Pass"
 }
+```
+```http
+GET /api/User/instructor/get
+Content-Type: application/json
+Response:
+ {
+    "firstName": "Instructor",
+    "lastName": "Instructor",
+    "imgUrl": null
+  }
 ```
 ## Team Workflow
 - Backend: Identity, JWT, DB schema/migrations
