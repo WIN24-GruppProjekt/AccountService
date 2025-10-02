@@ -16,4 +16,6 @@ public class RegisterInstructorDto
     public string Phone { get; set; } = null!;
     [Required]
     public string Password { get; set; } = null!;
+    
+    public string? ImgUrl { get; set; }
 }

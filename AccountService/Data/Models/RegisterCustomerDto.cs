@@ -17,4 +17,6 @@ public class RegisterCustomerDto
     [Required]
     public string Password { get; set; } = null!;
     
+    public string? ImgUrl { get; set; }
+    
 }

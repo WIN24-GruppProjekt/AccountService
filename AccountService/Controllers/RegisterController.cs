@@ -27,7 +27,8 @@ public class RegisterController(UserManager<Users> userManager) : ControllerBase
             Email = registrationForm.Email,
             FirstName = registrationForm.FirstName,
             LastName = registrationForm.LastName,
-            PhoneNumber = registrationForm.Phone
+            PhoneNumber = registrationForm.Phone,
+            ImgUrl = registrationForm.ImgUrl
         };
 
         var results = await userManager.CreateAsync(instructor, registrationForm.Password);
@@ -66,7 +67,8 @@ public class RegisterController(UserManager<Users> userManager) : ControllerBase
             Email = registrationForm.Email,
             FirstName = registrationForm.FirstName,
             LastName = registrationForm.LastName,
-            PhoneNumber = registrationForm.Phone
+            PhoneNumber = registrationForm.Phone,
+            ImgUrl = registrationForm.ImgUrl
         };
 
         var results = await userManager.CreateAsync(customer, registrationForm.Password);

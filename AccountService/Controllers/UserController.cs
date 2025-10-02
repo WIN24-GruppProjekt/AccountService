@@ -14,7 +14,7 @@ public class UserController(UserManager<Users> userManager) : ControllerBase
     public async Task<IActionResult> GetAllInstructors()
     {
         var instructors = await userManager.GetUsersInRoleAsync("Instructor");
-        var result = instructors.Select(instructor => new { instructor.FirstName, instructor.LastName });
+        var result = instructors.Select(instructor => new { instructor.FirstName, instructor.LastName, instructor.ImgUrl });
                                                 
         return Ok(result);
     }
