@@ -237,6 +237,9 @@ namespace AccountService.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(150)");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");

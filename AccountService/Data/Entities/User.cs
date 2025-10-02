@@ -12,4 +12,8 @@ public class Users : IdentityUser
     [PersonalData]
     [Column(TypeName = "nvarchar(50)")]
     public string LastName { get; set; } = null!;
+    
+    [PersonalData]
+    [Column(TypeName = "nvarchar(150)")]
+    public string? ImgUrl { get; set; }
 }
