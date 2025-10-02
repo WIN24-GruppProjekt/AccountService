@@ -18,4 +18,24 @@ public class UserController(UserManager<Users> userManager) : ControllerBase
                                                 
         return Ok(result);
     }
+    
+    [HttpGet("instructor/{id}")]
+    public async Task<IActionResult> GetInstructorById(string id)
+    {
+        var user = await userManager.FindByIdAsync(id);
+        if (user is null)
+            return NotFound();
+
+        var isInstructor = await userManager.IsInRoleAsync(user, "Instructor");
+        if (!isInstructor)
+            return NotFound();
+
+        return Ok(new
+        {
+            user.Id,
+            user.FirstName,
+            user.LastName,
+            user.ImgUrl,
+        });
+    }
 }
